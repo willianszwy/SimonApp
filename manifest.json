@@ -8,9 +8,9 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": "/",
+  "start_url": "/SimonApp/",
   "display": "standalone",
-  "theme_color": "#fafbfc",
+  "theme_color": "#2c6156",
   "background_color": "#ffffff",
   "orientation": "portrait"
 }
