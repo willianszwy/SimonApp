@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Grid, Button, Image, GridRow, Icon, Segment } from 'semantic-ui-react';
+
+import logo from './simon.png';
+
 const Index = () => (
     <Container>
         <Grid container centered verticalAlign="middle" padded>
             <GridRow  >
 
-                <Image className="painel-shadow" src='/static/simon.png' circular />
+                <Image className="painel-shadow" src={logo} circular />
 
             </GridRow>
             <GridRow >

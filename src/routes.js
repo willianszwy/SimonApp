@@ -25,14 +25,14 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 
 const Routes = () => (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
         <Switch>
             <Route path="/" exact component={Index} />
             <Route path="/qrcode/" component={QRCode} />
             <Route path="/codigo/" component={Codigo} />
             <PrivateRoute path="/status/" component={Status} />
             <PrivateRoute path="/atendimento/" component={Atendimento} />
-            <Route path="*" component={() => <h1>not found</h1>} />
+            <Route path="*" component={() => <Redirect to='/' />} />
         </Switch>
     </Router>
 
