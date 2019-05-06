@@ -1,0 +1,27 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Container, Grid, Button, Image, GridRow, Icon, Segment } from 'semantic-ui-react';
+const Index = () => (
+    <Container>
+        <Grid container centered verticalAlign="middle" padded>
+            <GridRow  >
+
+                <Image className="painel-shadow" src='/static/simon.png' circular />
+
+            </GridRow>
+            <GridRow >
+                <Button inverted size="massive" as={Link} to='/qrcode' fluid>
+                    <Icon name='qrcode' />
+                    Ler QRCode
+                </Button>
+            </GridRow>
+            <GridRow>
+                <Button inverted size="massive" as={Link} to='/codigo' fluid>
+                    Digitar Codigo
+                </Button>
+            </GridRow>
+        </Grid>
+    </Container>
+);
+
+export default Index;
