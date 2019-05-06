@@ -1,11 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Grid, Button, Image, GridRow, Icon, Segment } from 'semantic-ui-react';
+import { Link, Redirect } from 'react-router-dom';
+import { Container, Grid, Button, Image, GridRow, Icon } from 'semantic-ui-react';
+import { isAuthenticated } from '../services/auth';
 
 import logo from './simon.png';
 
-const Index = () => (
-    <Container>
+const Index = () => {
+    if (isAuthenticated()) {
+        return (<Redirect to='/status' />)
+    }
+    return (<Container>
         <Grid container centered verticalAlign="middle" padded>
             <GridRow  >
 
@@ -24,7 +28,7 @@ const Index = () => (
                 </Button>
             </GridRow>
         </Grid>
-    </Container>
-);
+    </Container>);
+};
 
 export default Index;
