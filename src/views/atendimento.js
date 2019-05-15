@@ -30,7 +30,8 @@ const Atendimento = () => (
                         </Statistic>
 
                     </Segment>
-                    <Button as={Link} to='/' onClick={logout()} color="black" content='Voltar para Início' icon='home' labelPosition='left' />
+                    <Button circular as={Link} to='/' size="huge" onClick={logout()} content="início" color="black"  icon='home'  />
+                  
                 </Grid.Column>
             </Grid>
         </Container>
