@@ -1,5 +1,7 @@
 import React from 'react';
-import { Container, Grid, Segment, Header, Icon, Statistic } from 'semantic-ui-react';
+import { Container, Grid, Segment, Header, Icon, Statistic, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { logout } from '../services/auth';
 
 const Atendimento = () => (
     <div className='atendimento'>
@@ -26,7 +28,9 @@ const Atendimento = () => (
                             <Statistic.Value>NR1243</Statistic.Value>
                             <Statistic.Label>MESA 2</Statistic.Label>
                         </Statistic>
+
                     </Segment>
+                    <Button as={Link} to='/' onClick={logout()} color="black" content='Voltar para Início' icon='home' labelPosition='left' />
                 </Grid.Column>
             </Grid>
         </Container>
