@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, GridRow, Input, GridColumn, Button } from 'semantic-ui-react';
+import { Container, Grid, GridRow, GridColumn, Button } from 'semantic-ui-react';
 import { Redirect, Link } from 'react-router-dom';
 import { login } from '../services/auth';
 import InputMask from 'react-input-mask';
