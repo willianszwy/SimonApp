@@ -27,7 +27,7 @@ class Codigo extends React.Component {
 
         const maskoption = {
             '9': '[0-9]',
-            'a': '[N|P-n|p]',
+            'a': '[N|P|n|p]',
             'b': '[Rr]'
         };
 
