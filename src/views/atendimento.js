@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid, Segment, Header, Icon, Statistic, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import { logout } from '../services/auth';
+import { logout, getToken } from '../services/auth';
 
 const Atendimento = () => (
     <div className='atendimento'>
@@ -24,14 +24,14 @@ const Atendimento = () => (
                             <Header.Content>CHEGOU SUA VEZ!</Header.Content>
                             <Header.Subheader>Dirija-se ao guichê para seu atendimento</Header.Subheader>
                         </Header>
-                        <Statistic color='green' inverted>
-                            <Statistic.Value>NR1243</Statistic.Value>
+                        <Statistic color={getToken()[0].toLowerCase() === 'p' ? 'blue' : 'green'} inverted>
+                            <Statistic.Value>{getToken()}</Statistic.Value>
                             <Statistic.Label>MESA 2</Statistic.Label>
                         </Statistic>
 
                     </Segment>
-                    <Button circular as={Link} to='/' size="huge" onClick={logout()} content="início" color="black"  icon='home'  />
-                  
+                    <Button circular as={Link} to='/' size="huge" onClick={logout()} content="início" color="black" icon='home' />
+
                 </Grid.Column>
             </Grid>
         </Container>

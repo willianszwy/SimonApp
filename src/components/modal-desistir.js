@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Modal } from 'semantic-ui-react'
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { logout } from '../services/auth';
 
 

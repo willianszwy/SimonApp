@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Grid, GridRow, Input, GridColumn, Button } from 'semantic-ui-react';
 import { Redirect, Link } from 'react-router-dom';
 import { login } from '../services/auth';
+import InputMask from 'react-input-mask';
 
 class Codigo extends React.Component {
     state = {
@@ -23,6 +24,13 @@ class Codigo extends React.Component {
         if (redirect) {
             return <Redirect to='/status' />;
         }
+
+        const maskoption = {
+            '9': '[0-9]',
+            'a': '[N|P-n|p]',
+            'b': '[Rr]'
+        };
+
         return (
             <Container>
                 <Grid container centered padded>
@@ -35,12 +43,18 @@ class Codigo extends React.Component {
                         <GridColumn>
                             <br />
                             <br />
-                            <Input fluid
-                                size='massive'
-                                icon='qrcode'
-                                focus placeholder='Digite Código...'
-                                onChange={e => this.setState({ data: e.target.value })}
-                            />
+
+                            <div class="ui fluid icon input massive">
+                                <InputMask {...this.props} mask="ab9999"
+                                    maskChar=""
+                                    onChange={e => this.setState({ data: e.target.value })}
+                                    formatChars={maskoption}
+                                />
+                                <i
+                                    aria-hidden="true"
+                                    class="qrcode icon"
+                                ></i>
+                            </div>
                         </GridColumn>
                     </GridRow>
                     <GridRow>
