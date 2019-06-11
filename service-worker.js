@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SimonApp/precache-manifest.db5a3c27e9ad85875f723e8f68fd5d41.js"
+  "/SimonApp/precache-manifest.0da835e620ca62f52f9516d5fed627d1.js"
 );
 
 self.addEventListener('message', (event) => {
